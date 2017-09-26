@@ -17,6 +17,7 @@
    - url=jdbc:oracle:thin:@[データベースサーバIPアドレス]:[ポート番号]:[インスタンス名]
    - 【設定例】
 -->
+<!--
 <Context>
   <Resource
      name="jdbc/TerasolunaSampleDataSource"
@@ -29,7 +30,7 @@
      maxWait="5000"
      maxActive="4"/>
 </Context>
-
+-->
 <!-- 
    - 「データベースがPostgreSQLの場合の設定」
    - 【記述書式】
@@ -39,20 +40,20 @@
    - url=jdbc:postgresql://[データベースサーバIPアドレス]:[ポート番号]/[データベース名称]
    - 【設定例】
 -->
-<!-- 
+
 <Context>
   <Resource
      name="jdbc/TerasolunaSampleDataSource"
      type="javax.sql.DataSource"
      driverClassName="org.postgresql.Driver"
-     username="postgres"
-     password=""
-     url="jdbc:postgresql://127.0.0.1:5432/sampledb"
+     username="terasoluna"
+     password="terasoluna"
+     url="jdbc:postgresql://127.0.0.1:5432/functionsampledb"
      maxIdle="2"
      maxWait="5000"
      maxActive="4"/>
 </Context>
--->
+
 
 <!-- 
    - 「データベースがhsqldbの場合の設定」

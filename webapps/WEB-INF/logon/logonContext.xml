@@ -9,5 +9,7 @@ http://www.springframework.org/schema/beans http://www.springframework.org/schem
 http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util-2.5.xsd">
     
     <!-- アクション定義 -->
-
+	 <!-- ログオン画面表示用アクション定義 -->
+    <bean name="/logon/logonSCR" scope="singleton"
+          class="jp.terasoluna.fw.web.struts.actions.ForwardAction" />
 </beans>

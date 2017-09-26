@@ -11,5 +11,10 @@
 
 <!-- ======================================== アクションマッピング定義 -->
   <action-mappings type="jp.terasoluna.fw.web.struts.action.ActionMappingEx">
+      <!-- ここから -->
+    <!-- ログオン画面表示用アクション -->
+    <action path="/logon/logonSCR"
+            parameter="/logon/logon.jsp" />
+    <!-- ここまで -->
   </action-mappings>
 </struts-config>

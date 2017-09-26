@@ -59,12 +59,13 @@
     parameter="messageSource" />
 
 <!-- ======================================== プラグイン定義 -->
+  <!-- SpringBean設定ファイル -->
   <plug-in className="org.springframework.web.struts.ContextLoaderPlugIn">
     <set-property property="contextConfigLocation"
-                  value="/WEB-INF/moduleContext.xml"/>
+                  value="/WEB-INF/moduleContext.xml,/WEB-INF/logon/logonContext.xml,/WEB-INF/userManager/userManagerContext.xml"/>
   </plug-in>
 
-   <plug-in className="jp.terasoluna.fw.web.struts.plugins.ResetterPlugIn">
+  <plug-in className="jp.terasoluna.fw.web.struts.plugins.ResetterPlugIn">
     <set-property
       property="resetter"
       value="jp.terasoluna.fw.web.struts.reset.ResetterImpl"/>

@@ -87,10 +87,6 @@
     <servlet-class>org.apache.struts.action.ActionServlet</servlet-class>
     <init-param>
       <param-name>config</param-name>
-      <param-value>/WEB-INF/struts-config.xml</param-value>
-    </init-param>
-    <init-param>
-      <param-name>config</param-name>
       <!-- ここから各業務のStruts設定ファイルを定義する。 -->
       <param-value>/WEB-INF/struts-config.xml,/WEB-INF/logon/struts-logon-config.xml,/WEB-INF/userManager/struts-userManager-config.xml</param-value>
       <!-- ここまで -->

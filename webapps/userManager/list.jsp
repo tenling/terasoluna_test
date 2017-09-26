@@ -10,7 +10,7 @@
 <html:html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=shift_jis">
-<title>メニュー画面</title>
+<title>一覧表示画面</title>
 </head>
 
 <body>
@@ -23,31 +23,15 @@
     <tr>
         <td align="center">
             <h2>
-                メニュー画面
+                一覧表示画面
             </h2>
-            ようこそ <bean:write name="USER_VALUE_OBJECT"
-              property="userId" scope="session" ignore="true"/> さん。
         </td>
     </tr>
 </table>
 
-<ts:form action="/logon/menuDSP">
-<table border="0">
-  <tr>
-    <td>
-        <ts:submit value="登録画面" property="forward_insert" />
-    </td>
-  </tr>
-  <tr>
-    <td>
-        <ts:submit value="一覧画面" property="forward_list" />
-    </td>
-  </tr>
-</table>
-</ts:form>
-
 <hr>
-<ts:link action="/logon/logoff.do" >ログオフ</ts:link>
-<!-- ここまで -->
+
+<ts:link page="/logon/menuSCR.do">メニュー</ts:link>
+
 </body>
 </html:html>

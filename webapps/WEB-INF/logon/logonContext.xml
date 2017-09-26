@@ -29,4 +29,8 @@ http://www.springframework.org/schema/util http://www.springframework.org/schema
     <!-- ログオフ処理用アクション定義 -->
     <bean name="/logon/logoff" scope="singleton"
           class="jp.terasoluna.fw.web.struts.actions.LogoffAction" />
+    
+    <!-- メニュー画面分岐用アクション定義 -->
+    <bean name="/logon/menuDSP" scope="singleton"
+          class="jp.terasoluna.fw.web.struts.actions.DispatchAction" />
 </beans>

@@ -11,5 +11,13 @@
 
 <!-- ======================================== アクションマッピング定義 -->
   <action-mappings type="jp.terasoluna.fw.web.struts.action.ActionMappingEx">
+      <!-- 登録画面表示用アクション -->
+    <action path="/userManager/insertSCR"
+            parameter="/userManager/insert.jsp"/>
+        
+    <!-- 一覧画面表示用アクション -->
+    <action path="/userManager/listSCR"
+            parameter="/userManager/list.jsp" />
+    
   </action-mappings>
 </struts-config>

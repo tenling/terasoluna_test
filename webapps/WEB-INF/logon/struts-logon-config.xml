@@ -35,5 +35,12 @@
     <action path="/logon/logoff"
             name="_logonForm" scope="session"
             parameter="/logon/logon.jsp" />
+    
+    <!-- メニュー画面分岐用アクション -->
+    <action path="/logon/menuDSP"
+            name="_logonForm" scope="session">
+        <forward name="insert" path="/userManager/insertSCR.do" />
+        <forward name="list" path="/userManager/listSCR.do" />
+    </action>
   </action-mappings>
 </struts-config>

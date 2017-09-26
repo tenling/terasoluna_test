@@ -10,4 +10,12 @@ http://www.springframework.org/schema/util http://www.springframework.org/schema
     
     <!-- アクション定義 -->
 
+    <!-- 登録画面表示用アクション定義 -->
+    <bean name="/userManager/insertSCR" scope="singleton"
+          class="jp.terasoluna.fw.web.struts.actions.ForwardAction" />
+
+    <!-- 一覧画面表示用アクション定義 -->
+    <bean name="/userManager/listSCR" scope="singleton"
+          class="jp.terasoluna.fw.web.struts.actions.ForwardAction" />
+
 </beans>

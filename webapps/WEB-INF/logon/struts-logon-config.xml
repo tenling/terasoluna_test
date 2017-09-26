@@ -7,6 +7,9 @@
 
 <!-- ======================================== フォームビーン定義 -->
   <form-beans>
+    <!-- ログオン用アクションフォーム -->
+    <form-bean name="_logonForm"
+               type="jp.terasoluna.thin.tutorial.web.logon.form.LogonForm" /> 
   </form-beans>
 
 <!-- ======================================== アクションマッピング定義 -->

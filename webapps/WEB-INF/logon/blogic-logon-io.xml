@@ -5,4 +5,14 @@
                            
 <!-- ビジネスロジック入出力定義 -->
 <blogic-io>
+    <action path="/logon/logonBL">
+                <!-- 入力クラスの設定 -->
+        <blogic-params bean-name="jp.terasoluna.thin.tutorial.web.logon.dto.LogonInput">
+            <set-property property="userId" blogic-property="userId" source="form" />
+        </blogic-params>
+                <!-- 出力クラスの設定 -->
+        <blogic-result>
+            <set-property property="USER_VALUE_OBJECT" blogic-property="uvo" dest="session" />
+        </blogic-result>
+    </action>
 </blogic-io>

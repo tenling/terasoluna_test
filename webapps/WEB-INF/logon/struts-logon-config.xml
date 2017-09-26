@@ -14,10 +14,26 @@
 
 <!-- ======================================== アクションマッピング定義 -->
   <action-mappings type="jp.terasoluna.fw.web.struts.action.ActionMappingEx">
-      <!-- ここから -->
+      
     <!-- ログオン画面表示用アクション -->
     <action path="/logon/logonSCR"
+            name="_logonForm" scope="session"
             parameter="/logon/logon.jsp" />
-    <!-- ここまで -->
+    
+    <!-- ログオン処理用アクション -->
+    <action path="/logon/logonBL"
+            name="_logonForm" scope="session">
+        <forward name="success" path="/logon/menuSCR.do" />
+    </action>
+
+    <!-- メニュー画面表示用アクション -->        
+    <action path="/logon/menuSCR"
+            name="_logonForm" scope="session"
+            parameter="/logon/menu.jsp" />
+    
+    <!-- ログオフ処理用アクション -->
+    <action path="/logon/logoff"
+            name="_logonForm" scope="session"
+            parameter="/logon/logon.jsp" />
   </action-mappings>
 </struts-config>

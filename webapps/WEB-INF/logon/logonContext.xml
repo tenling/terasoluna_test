@@ -12,4 +12,21 @@ http://www.springframework.org/schema/util http://www.springframework.org/schema
 	 <!-- ログオン画面表示用アクション定義 -->
     <bean name="/logon/logonSCR" scope="singleton"
           class="jp.terasoluna.fw.web.struts.actions.ForwardAction" />
+    
+    <bean id="LogonBLogic" scope="singleton"
+       class="jp.terasoluna.thin.tutorial.web.logon.blogic.LogonBLogic" />
+    
+    <!-- ログオン処理用アクション定義 -->
+    <bean name="/logon/logonBL" scope="singleton"
+          class="jp.terasoluna.fw.web.struts.actions.BLogicAction" >
+          <property name="businessLogic" ref="LogonBLogic" />
+    </bean>
+
+    <!-- メニュー画面表示用アクション定義 -->
+    <bean name="/logon/menuSCR" scope="singleton"
+          class="jp.terasoluna.fw.web.struts.actions.ForwardAction" />
+    
+    <!-- ログオフ処理用アクション定義 -->
+    <bean name="/logon/logoff" scope="singleton"
+          class="jp.terasoluna.fw.web.struts.actions.LogoffAction" />
 </beans>

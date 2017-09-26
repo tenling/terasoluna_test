@@ -10,7 +10,7 @@
 <html:html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=shift_jis">
-<title>ログオン画面</title>
+<title>メニュー画面</title>
 </head>
 
 <body>
@@ -23,29 +23,17 @@
     <tr>
         <td align="center">
             <h2>
-                ログオン画面
+                メニュー画面
             </h2>
+            ようこそ <bean:write name="USER_VALUE_OBJECT"
+              property="userId" scope="session" ignore="true"/> さん。
         </td>
     </tr>
 </table>
 
 <!-- ここから -->
-<ts:form action="/logon/logonBL">
-<table border="0" align="center">
-  <tr>
-    <td>
-      UserId：
-    </td>
-    <td>
-      <html:text property="userId"/>
-    </td>
-    <td>
-      <ts:submit value="ログオン"/>
-    </td>
-  </tr>
-</table>
-</ts:form>
+<hr>
+<ts:link action="/logon/logoff.do" >ログオフ</ts:link>
 <!-- ここまで -->
-
 </body>
 </html:html>

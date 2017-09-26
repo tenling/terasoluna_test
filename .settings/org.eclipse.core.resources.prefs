@@ -1,2 +1,6 @@
 eclipse.preferences.version=1
+encoding//sources/jp/terasoluna/thin/tutorial/web/common/uvo/TutorialUVO.java=UTF-8
+encoding//sources/jp/terasoluna/thin/tutorial/web/logon/blogic/LogonBLogic.java=UTF-8
+encoding//sources/jp/terasoluna/thin/tutorial/web/logon/dto/LogonInput.java=UTF-8
+encoding//sources/jp/terasoluna/thin/tutorial/web/logon/dto/LogonOutput.java=UTF-8
 encoding//sources/jp/terasoluna/thin/tutorial/web/logon/form/LogonForm.java=UTF-8

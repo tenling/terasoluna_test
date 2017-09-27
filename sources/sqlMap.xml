@@ -3,7 +3,7 @@
             PUBLIC "-//ibatis.apache.org//DTD SQL Map 2.0//EN"
             "http://ibatis.apache.org/dtd/sql-map-2.dtd">
 <!-- SqlMap定義 -->
-<sqlMap namespace="user">
+<sqlMap namespace="userManager">
 
 <!-- 設定例
   <select id="selectUsers" 
@@ -55,4 +55,27 @@
         ID = #userId#
   </delete>
 -->
+
+<!-- 指定したIDのを取得する -->
+    <select id="getUser"
+            parameterClass="jp.terasoluna.thin.tutorial.web.usermanager.dto.InsertInput"
+            resultClass="jp.terasoluna.thin.tutorial.web.usermanager.vo.SelectUserOutput">
+        SELECT ID, name, age, birth FROM userlist WHERE id = #id#
+    </select>
+
+    <!-- ユーザを挿入する -->
+    <insert id="insertUser" 
+        parameterClass="jp.terasoluna.thin.tutorial.web.usermanager.dto.InsertInput">
+        INSERT INTO userlist (
+        ID,
+        name,
+        age,
+        birth
+        )VALUES(
+        #id#,
+        #name#,
+        #age#,
+        #birth#)
+    </insert>
+    
 </sqlMap>

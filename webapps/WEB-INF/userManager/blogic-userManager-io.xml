@@ -5,4 +5,15 @@
                            
 <!-- ビジネスロジック入出力定義 -->
 <blogic-io>
+    
+    <!-- ビジネスロジック入出力定義 -->
+   <action path="/userManager/insertBL">
+     <blogic-params
+       bean-name="jp.terasoluna.thin.tutorial.web.usermanager.dto.InsertInput">
+       <set-property property="id" blogic-property="id" source="form" />
+       <set-property property="name" blogic-property="name" source="form" />
+       <set-property property="age" blogic-property="age" source="form" />
+       <set-property property="birth" blogic-property="birth" source="form" />
+     </blogic-params>
+   </action>
 </blogic-io>

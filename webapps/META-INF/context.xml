@@ -46,9 +46,9 @@
      name="jdbc/TerasolunaSampleDataSource"
      type="javax.sql.DataSource"
      driverClassName="org.postgresql.Driver"
-     username="terasoluna"
-     password="terasoluna"
-     url="jdbc:postgresql://127.0.0.1:5432/functionsampledb"
+     username="postgres"
+     password="ten0"
+     url="jdbc:postgresql://127.0.0.1:5432/terasolunaSample"
      maxIdle="2"
      maxWait="5000"
      maxActive="4"/>

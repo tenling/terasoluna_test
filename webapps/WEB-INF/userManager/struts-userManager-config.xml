@@ -7,6 +7,10 @@
 
 <!-- ======================================== フォームビーン定義 -->
   <form-beans>
+      
+    <!-- ユーザ管理用アクションフォーム -->
+    <form-bean name="_userManagerForm"
+               type="jp.terasoluna.thin.tutorial.web.usermanager.form.UserManagerForm" />
   </form-beans>
 
 <!-- ======================================== アクションマッピング定義 -->
@@ -18,6 +22,18 @@
     <!-- 一覧画面表示用アクション -->
     <action path="/userManager/listSCR"
             parameter="/userManager/list.jsp" />
+    
+    <!-- 登録処理用アクション -->
+    <action path="/userManager/insertBL"
+            name="_userManagerForm" scope="session">
+            <forward name="success" path="/userManager/resultSCR.do" />
+            <forward name="failure" path="/userManager/insertSCR.do" />
+    </action>
+    
+    <!-- 登録結果画面表示用アクション -->
+    <action path="/userManager/resultSCR"
+            name="_userManagerForm" scope="session"
+            parameter="/userManager/result.jsp"/>
     
   </action-mappings>
 </struts-config>

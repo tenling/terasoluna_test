@@ -29,9 +29,71 @@
     </tr>
 </table>
 
+<!-- エラーメッセージを表示する -->
+<html:errors />
+
+<ts:form action="/userManager/insertBL">
+
+<fieldset style="border:2pt solid black;padding:20px;width:100%;">
+    <legend style="font-weight:bold;">
+      登録情報入力
+    </legend><p>
+    <table border="0" frame="box">
+        <tr>
+            <td valign="top">
+                <table frame="box">
+                    <tr>
+                        <td align="center" width="50">
+                            ID
+                        </td>
+                        <td width="200">
+                            <html:text name="_userManagerForm" property="id" maxlength="10" />
+                            <br><span style="font-size:xx-small; color:red">(必須入力,数字のみ10桁以内))</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td align="center" width="50">
+                            NAME
+                        </td>
+                        <td width="200">
+                            <html:text name="_userManagerForm" property="name" maxlength="20" />
+                            <br><span style="font-size:xx-small; color:red">(必須入力,20桁以内))</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td align="center" width="50">
+                            AGE
+                        </td>
+                        <td width="200">
+                            <html:text name="_userManagerForm" property="age" maxlength="3" />
+                            <br><span style="font-size:xx-small; color:red">(必須入力,数字のみ3桁以内))</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td align="center" width="50">
+                            BIRTH
+                        </td>
+                        <td width="200">
+                            <html:text name="_userManagerForm" property="birth" maxlength="10" />
+                            <br><span style="font-size:xx-small; color:red">(yyyy/MM/dd形式))</span>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <ts:submit value="登録" />
+            </td>
+        </tr>
+    </table>
+</fieldset>
+
 <hr>
 
 <ts:link page="/logon/menuSCR.do">メニュー</ts:link>
+
+</ts:form>
 
 </body>
 </html:html>

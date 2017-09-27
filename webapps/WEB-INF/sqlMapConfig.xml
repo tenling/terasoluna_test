@@ -7,6 +7,6 @@
     <!-- sqlMapを分割する場合、sqlIDの重複を考慮する必要があるため、-->
     <!-- デフォルト設定ではuseStatementNamespaces=true にしています。 -->
     <!-- namespaceによるsqlMapの分割が必要ない場合コメントアウトして下さい。 -->
-    <settings useStatementNamespaces="true"/>
+    <settings useStatementNamespaces="false"/>
     <sqlMap resource="sqlMap.xml"/>
 </sqlMapConfig>

@@ -42,5 +42,13 @@
         <forward name="insert" path="/userManager/insertSCR.do" />
         <forward name="list" path="/userManager/listSCR.do" />
     </action>
+    
+    <!-- メニュー画面分岐用アクション -->
+    <action path="/logon/menuDSP"
+        name="_logonForm" scope="session">
+        <forward name="insert" path="/userManager/insertSCR.do" />
+        <!-- listSCR.doからlistBL.doに修正する -->
+        <forward name="list" path="/userManager/listBL.do" />
+    </action>
   </action-mappings>
 </struts-config>

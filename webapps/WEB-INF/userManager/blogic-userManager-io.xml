@@ -16,4 +16,16 @@
        <set-property property="birth" blogic-property="birth" source="form" />
      </blogic-params>
    </action>
+   
+   <action path="/userManager/listBL">
+     <blogic-params
+       bean-name="jp.terasoluna.thin.tutorial.web.usermanager.dto.ListInput">
+       <set-property property="row" blogic-property="row" source="form" />
+       <set-property property="startIndex" blogic-property="startIndex" source="form" />
+     </blogic-params>
+     <blogic-result>
+       <set-property property="totalCount" blogic-property="totalCount" dest="form" />
+       <set-property property="users" blogic-property="users" dest="form" />
+     </blogic-result>
+   </action> 
 </blogic-io>

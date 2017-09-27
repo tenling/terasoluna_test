@@ -78,4 +78,20 @@
         #birth#)
     </insert>
     
+    <!-- 全ユーザを取得する -->
+    <select id="getUsers"
+        resultClass="jp.terasoluna.thin.tutorial.web.usermanager.vo.SelectUserOutput">
+        SELECT id, name, age, birth FROM userlist
+    </select>
+        
+    <!-- 登録されているユーザの件数を取得する -->
+    <select id="getUserCount" 
+            resultClass="java.lang.String"
+            resultSetType="SCROLL_INSENSITIVE">
+        SELECT
+            COUNT(id)
+        FROM
+            userlist
+    </select>
+    
 </sqlMap>

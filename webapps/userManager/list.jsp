@@ -29,6 +29,52 @@
     </tr>
 </table>
 
+<ts:pageLinks id="userListPageLinks"
+              action="/userManager/listBL" name="_userManagerForm" rowProperty="row"
+              totalProperty="totalCount" indexProperty="startIndex"
+              currentPageIndex="now" totalPageCount="total"/>
+<div style="text-align:center">
+<h5>
+
+<bean:write name="now"/>／<bean:write name="total"/>（<bean:write name="_userManagerForm" property="totalCount"/>）
+
+<p>
+
+<bean:write name="userListPageLinks" filter="false"/>
+
+<p>
+<table align="center" frame="box" border="1">
+    <tr>
+        <td width="30"  align="center"><b>ID</b></td>
+        <td width="100" align="center"><b>NAME</b></td>
+        <td width="30"  align="center"><b>AGE</b></td>
+        <td width="80"  align="center"><b>BIRTH</b></td>
+    </tr>
+    <logic:iterate id="userBean" name="_userManagerForm" property="users">
+    <tr>
+        <td align="center">
+          <bean:write name="userBean" property="id"/>
+        </td>
+        <td>
+          <bean:write name="userBean" property="name"/>
+        </td>
+        <td align="center">
+          <bean:write name="userBean" property="age"/>
+        </td>
+        <td align="right">
+          <bean:write name="userBean" property="birth"/>
+        </td>
+    </tr>
+    </logic:iterate>
+</table>
+<p>
+
+<bean:write name="userListPageLinks" filter="false"/>
+
+</h5>
+
+</div>
+
 <hr>
 
 <ts:link page="/logon/menuSCR.do">メニュー</ts:link>

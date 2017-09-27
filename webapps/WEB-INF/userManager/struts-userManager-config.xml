@@ -35,5 +35,11 @@
             name="_userManagerForm" scope="session"
             parameter="/userManager/result.jsp"/>
     
+    <!-- 一覧データ取得処理用アクション -->
+    <action path="/userManager/listBL"
+        name="_userManagerForm" scope="session">
+        <forward name="success" path="/userManager/listSCR.do"/>
+    </action>
+    
   </action-mappings>
 </struts-config>

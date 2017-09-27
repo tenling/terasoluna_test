@@ -35,4 +35,16 @@ http://www.springframework.org/schema/util http://www.springframework.org/schema
     <bean name="/userManager/resultSCR" scope="singleton"
           class="jp.terasoluna.fw.web.struts.actions.ForwardAction" />
     
+    <!-- 一覧データ取得処理ビジネスロジック定義 -->
+    <bean id="ListBLogic" scope="singleton"
+          class="jp.terasoluna.thin.tutorial.web.usermanager.blogic.ListBLogic">
+          <property name="queryDAO" ref="queryDAO" />
+    </bean>
+    
+    <!-- 一覧データ取得処理用アクション定義 -->
+    <bean name="/userManager/listBL" scope="singleton"
+          class="jp.terasoluna.fw.web.struts.actions.BLogicAction" >
+          <property name="businessLogic" ref="ListBLogic" />
+    </bean> 
+    
 </beans>

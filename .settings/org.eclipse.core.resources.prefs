@@ -1,5 +1,4 @@
 eclipse.preferences.version=1
-encoding//sources/application-messages.properties=UTF-8
 encoding//sources/jp/terasoluna/thin/tutorial/web/common/uvo/TutorialUVO.java=UTF-8
 encoding//sources/jp/terasoluna/thin/tutorial/web/logon/blogic/LogonBLogic.java=UTF-8
 encoding//sources/jp/terasoluna/thin/tutorial/web/logon/dto/LogonInput.java=UTF-8
@@ -9,4 +8,5 @@ encoding//sources/jp/terasoluna/thin/tutorial/web/usermanager/blogic/InsertBLogi
 encoding//sources/jp/terasoluna/thin/tutorial/web/usermanager/dto/InsertInput.java=UTF-8
 encoding//sources/jp/terasoluna/thin/tutorial/web/usermanager/form/UserManagerForm.java=UTF-8
 encoding//sources/jp/terasoluna/thin/tutorial/web/usermanager/vo/SelectUserOutput.java=UTF-8
+encoding//webapps/userManager/insert.jsp=sjis
 encoding/<project>=sjis

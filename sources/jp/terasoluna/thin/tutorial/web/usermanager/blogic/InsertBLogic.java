@@ -38,7 +38,7 @@ public class InsertBLogic implements BLogic<InsertInput> {
     public BLogicResult execute(InsertInput param) {
     	BLogicResult result = new BLogicResult();
     	SelectUserOutput selectUserOutput = null;
-//    	log.debug("Tenling Debug! "+param.getId());
+    	
     	try{
     		selectUserOutput 
             = queryDAO.executeForObject("getUser", param, SelectUserOutput.class);

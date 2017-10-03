@@ -35,10 +35,12 @@
             name="_userManagerForm" scope="session"
             parameter="/userManager/result.jsp"/>
     
-    <!-- 一覧データ取得処理用アクション -->
-    <action path="/userManager/listBL"
-        name="_userManagerForm" scope="session">
-        <forward name="success" path="/userManager/listSCR.do"/>
+    <!-- 登録処理用アクション -->
+    <action path="/userManager/insertBL"
+            name="_userManagerForm" scope="session"
+            validate="true" input="/userManager/insertSCR.do">
+            <forward name="success" path="/userManager/resultSCR.do" />
+            <forward name="failure" path="/userManager/insertSCR.do" />
     </action>
     
   </action-mappings>

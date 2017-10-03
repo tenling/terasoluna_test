@@ -40,17 +40,19 @@
         </field>
 
         <field property="birth"
-            depends="date,maxlength">
-          <arg key="insert.birth" position="0"/>
-          <arg key="${var:maxlength}" name="maxlength" resource="false" position="1"/>
-          <arg key="${var:datePattern}" name="date" resource="false" position="1"/>
+            depends="multiField">
+          <msg key="errors.multiField" name="multiField"/>
+          <arg key="insert.birth" position="0" />
+          <arg key="insert.age"   position="1" />
           <var>
-            <var-name>datePattern</var-name>
-            <var-value>yyyy/MM/dd</var-value>
+            <var-name>fields</var-name>
+            <var-value>age</var-value>
           </var>
           <var>
-            <var-name>maxlength</var-name>
-            <var-value>10</var-value>
+            <var-name>multiFieldValidator</var-name>
+            <var-value>
+              jp.terasoluna.thin.tutorial.web.usermanager.form.AgeValidator
+            </var-value>
           </var>
         </field>
 

@@ -5,4 +5,23 @@
           "http://jakarta.apache.org/commons/dtds/validator_1_3_0.dtd">
 
 <form-validation>
+
+    <formset>
+
+      <!-- ログオン機能確認 -->
+      <form name="/logon/logonBL">
+        <field property="userId"
+            depends="required,alphaNumericString,maxlength">
+          <arg key="logon.userId" position="0"/>
+          <arg key="${var:maxlength}" name="maxlength"
+               resource="false" position="1"/>
+          <var>
+            <var-name>maxlength</var-name>
+            <var-value>10</var-value>
+          </var>
+        </field>
+      </form>
+      
+    </formset>
+    
 </form-validation>

@@ -32,7 +32,8 @@
 <!-- エラーメッセージを表示する -->
 <html:errors />
 
-<ts:form action="/userManager/insertBL">
+<html:javascript formName="/userManager/insertBL" method="validateRegist"/>
+<ts:form action="/userManager/insertBL" onsubmit="return validateRegist(this);">
 
 <fieldset style="border:2pt solid black;padding:20px;width:100%;">
     <legend style="font-weight:bold;">

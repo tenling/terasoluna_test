@@ -29,6 +29,8 @@
     </tr>
 </table>
 
+<html:errors />
+
 <!-- ‚±‚±‚©‚ç -->
 <ts:form action="/logon/logonBL">
 <table border="0" align="center">

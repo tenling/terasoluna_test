@@ -50,5 +50,12 @@
         <!-- listSCR.doからlistBL.doに修正する -->
         <forward name="list" path="/userManager/listBL.do" />
     </action>
+    
+    <!-- ログオン処理用アクション -->
+    <action path="/logon/logonBL"
+            name="_logonForm" scope="session"
+            validate="true" input="/logon/logoff.do">
+        <forward name="success" path="/logon/menuSCR.do" />
+    </action>
   </action-mappings>
 </struts-config>

@@ -11,6 +11,7 @@ import jp.terasoluna.fw.service.thin.BLogicMessage;
 import jp.terasoluna.fw.service.thin.BLogicMessages;
 import jp.terasoluna.fw.service.thin.BLogicResult;
 import jp.terasoluna.thin.tutorial.web.usermanager.dto.InsertInput;
+import jp.terasoluna.thin.tutorial.web.usermanager.exception.InsertException;
 import jp.terasoluna.thin.tutorial.web.usermanager.vo.SelectUserOutput;
 
 /**
@@ -65,15 +66,16 @@ public class InsertBLogic implements BLogic<InsertInput> {
         //登録処理
         updateDAO.execute("insertUser", param);
         
-        //ここから
-        //メッセージ処理
-        BLogicMessages messages = new BLogicMessages();
-                messages.add("message", new BLogicMessage("message.regist",param.getId()));
-                result.setMessages(messages);
-                //ここまで
-
-                result.setResultString("success");
-                return result;
+//        //ここから
+//        //メッセージ処理
+//        BLogicMessages messages = new BLogicMessages();
+//                messages.add("message", new BLogicMessage("message.regist",param.getId()));
+//                result.setMessages(messages);
+//                //ここまで
+//
+//                result.setResultString("success");
+//                return result;
+        throw new InsertException();
     }
 
     /**

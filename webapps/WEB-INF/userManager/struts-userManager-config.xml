@@ -23,13 +23,6 @@
     <action path="/userManager/listSCR"
             parameter="/userManager/list.jsp" />
     
-    <!-- 登録処理用アクション -->
-    <action path="/userManager/insertBL"
-            name="_userManagerForm" scope="session">
-            <forward name="success" path="/userManager/resultSCR.do" />
-            <forward name="failure" path="/userManager/insertSCR.do" />
-    </action>
-    
     <!-- 登録結果画面表示用アクション -->
     <action path="/userManager/resultSCR"
             name="_userManagerForm" scope="session"
@@ -39,6 +32,13 @@
     <action path="/userManager/insertBL"
             name="_userManagerForm" scope="session"
             validate="true" input="/userManager/insertSCR.do">
+            <exception key="errors.insert.error"
+                       path="/error.jsp"
+                       className="jp.terasoluna.fw.web.struts.action.ExceptionConfigEx"
+                       handler="jp.terasoluna.fw.web.struts.action.DefaultExceptionHandler"
+                       type="jp.terasoluna.thin.tutorial.web.usermanager.exception.InsertException">
+                       <set-property property="logLevel" value="error"/>
+            </exception>
             <forward name="success" path="/userManager/resultSCR.do" />
             <forward name="failure" path="/userManager/insertSCR.do" />
     </action>

@@ -66,19 +66,23 @@
   </filter-mapping>
 
   <!-- アクセス権限チェック -->
-  <!-- 設定例
+
   <filter>
-    <filter-name>authorizationControlFilter</filter-name>
+    <filter-name>AuthenticationControlFilter</filter-name>
     <filter-class>
-      jp.terasoluna.fw.web.thin.AuthorizationControlFilter
+      jp.terasoluna.fw.web.thin.AuthenticationControlFilter
     </filter-class>
+    <init-param>
+      <param-name>controller</param-name>
+      <param-value>tutorialAuthenticationController</param-value>
+    </init-param>
   </filter>
 
   <filter-mapping>
-    <filter-name>authorizationControlFilter</filter-name>
+    <filter-name>AuthenticationControlFilter</filter-name>
     <url-pattern>/*</url-pattern>
   </filter-mapping>
-  -->
+ 
 
 <!-- ======================================== サーブレット定義 -->
 
@@ -126,6 +130,13 @@
 
   <error-page>
     <error-code>503</error-code>
+    <location>/error.jsp</location>
+  </error-page>
+  
+  <error-page>
+    <exception-type>
+      jp.terasoluna.fw.web.thin.UnauthenticatedException
+    </exception-type>
     <location>/error.jsp</location>
   </error-page>
 

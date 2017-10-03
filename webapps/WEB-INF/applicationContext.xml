@@ -50,6 +50,10 @@ http://www.springframework.org/schema/tx http://www.springframework.org/schema/t
     </property>
   </bean>
   -->
+  
+  <!-- ログオン済みチェック設定 -->
+  <bean id="tutorialAuthenticationController"
+        class="jp.terasoluna.thin.tutorial.web.common.controller.TutorialAuthController"/>
 
 <!-- ======================================== データソース定義 -->
   <!-- 
